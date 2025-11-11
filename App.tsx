@@ -17,7 +17,7 @@ const App: React.FC = () => {
   ];
 
   const currentMonthName = useMemo(() => farsiMonths[currentDate.getMonth()], [currentDate]);
-  const currentYear = useMemo(() => currentDate.getFullYear(), [currentDate]);
+  const currentYear = useMemo(() => currentDate.getFullYear()-621, [currentDate]);
 
   const handlePrevMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
